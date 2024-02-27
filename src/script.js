@@ -1,4 +1,3 @@
-// import { parseScrubs } from "./har_sanitize.js";
 import {
   generateCheckboxHtml,
   downloadFile,

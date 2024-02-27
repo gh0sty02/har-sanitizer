@@ -154,7 +154,7 @@ export async function sanitize(input, secondTry, options = {}) {
   let promises = groups.map((currGroup, index) => {
     return new Promise((resolve, reject) => {
       const worker = workers[index];
-      worker.postMessage({ data: { wordList, currGroup, type: "sanitize" } });
+      worker.postMessage({ data: { wordList, currGroup } });
 
       worker.onmessage = function (event) {
         jsonObj.log.entries.push(...event.data);
